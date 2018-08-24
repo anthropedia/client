@@ -1,9 +1,9 @@
 <app>
-  <nav>
-    <a href="/">home</a>
-    <a href="/welcome/anonymous">welcome</a>
-    <a href="/nowhere">nowhere</a>
-  </nav>
+  <header>
+    <a class=button href="/">home</a>
+    <a class=button href="/welcome/anonymous">welcome</a>
+    <a class=button href="/nowhere">nowhere</a>
+  </header>
 
   <home if={ this.page == 'home' }></home>
   <welcome if={ this.page == 'welcome' } name={ this.name }></welcome>
