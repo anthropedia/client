@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently 'npm run watch' 'http-server'",
+    "start": "concurrently 'npm run watch' 'npm run serve'",
+    "serve": "nodemon server.js",
     "watch": "riot -w --ext html --type es6 src/components/ dist/components.js",
     "build": "riot --ext html src/components/ dist/components.js"
   },
@@ -20,6 +21,8 @@
   },
   "devDependencies": {
     "concurrently": "*",
-    "http-server": "*"
+    "express": "*",
+    "nodemon": "*",
+    "serve-static": "*"
   }
 }
