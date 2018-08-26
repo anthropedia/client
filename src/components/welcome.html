@@ -1,4 +1,17 @@
 <welcome>
   <h1>Welcome { this.opts.name }</h1>
   <p>You are successfully running this app!</p>
+
+  <p if={ this.riotVersion }>
+    It is using { this.riotVersion.split(',')[0].replace('/* ', '') }
+    <br>
+    <small>(This is a demo of the <code>request()</code> function)</small>
+  </p>
+
+  <script>
+    this.on('mount', async () => {
+      this.riotVersion = await request('/js/vendors/riot.min.js')
+      this.update()
+    })
+  </script>
 </welcome>
