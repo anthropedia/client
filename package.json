@@ -12,7 +12,6 @@
   "author": "Vincent Agnano",
   "license": "MIT",
   "dependencies": {
-    "concurrent": "*",
     "mini.css": "*",
     "page.js": "*",
     "riot": "*"
