@@ -4,16 +4,14 @@
   "description": "",
   "main": "index.html",
   "scripts": {
-    "start": "concurrently 'npm run watch' 'npm run serve'",
+    "start": "concurrently 'npm run serve' 'npm run watch'",
     "serve": "nodemon server.js",
-    "watch": "riot -w --ext html --type es6 src/components/ dist/components.js",
-    "build": "riot --ext html src/components/ dist/components.js"
+    "watch": "npm run build -- -w",
+    "build": "riot --config riot.config"
   },
   "author": "Vincent Agnano",
   "license": "MIT",
   "dependencies": {
-    "@babel/core": "*",
-    "@types/es6-promise": "*",
     "concurrent": "*",
     "mini.css": "*",
     "page.js": "*",
@@ -22,7 +20,6 @@
   "devDependencies": {
     "concurrently": "*",
     "express": "*",
-    "nodemon": "*",
-    "serve-static": "*"
+    "nodemon": "*"
   }
 }

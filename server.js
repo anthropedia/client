@@ -1,10 +1,11 @@
 const express = require('express')
-const serveStatic = require('serve-static')
 
 const app = express()
 const port = process.env.PORT || 8080
 
-app.use(serveStatic(__dirname))
+app.use('/js/', express.static('src/js'))
+app.use('/css/', express.static('src/css'))
+app.use('/dist/', express.static('dist'))
 
 app.all('*', (_req, res) => res.sendFile(`${__dirname}/index.html`))
 
