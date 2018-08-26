@@ -35,8 +35,7 @@ src/  # source files
     home.html # a demo home page
     welcome.html  # a demo second page
     error404.html # displays when a URL is not found
-  js/
-    main.js     # the app scripts entrypoint
+  js/ # source JS files
     vendors/    # 3rd party JS libs
 index.html  # the app entry point
 ```
