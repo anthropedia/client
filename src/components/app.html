@@ -19,7 +19,6 @@
       this.update()
     }
 
-
     // Routes.
     page('/', () => this.setPage('home'))
 
@@ -30,7 +29,7 @@
 
     page('*', () => this.setPage('error404'))
 
-    page({ hashbang: true })
+    page()
   </script>
 
   <style>

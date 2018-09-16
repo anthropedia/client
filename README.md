@@ -16,6 +16,9 @@ npm install
 
 And adapt the _src/components_ files.
 
+Some sugar has been added:
+
+- `request()`: a global function wrapping _fetch_ for calling APIs. Returns a JSON content when available, text otherwise.
 
 ## Commands
 
@@ -35,8 +38,8 @@ src/  # source files
     home.html # a demo home page
     welcome.html  # a demo second page
     error404.html # displays when a URL is not found
-  main.js     # the app scripts entrypoint
-  vendors/    # 3rd party libs
+  js/ # source JS files
+    vendors/    # 3rd party JS libs
 index.html  # the app entry point
 ```
 
@@ -47,5 +50,4 @@ index.html  # the app entry point
 - Routing is based on [Page.js](https://github.com/visionmedia/page.js)
 - Riot files use `.html` extension
 - 3rd party libs files are installed with _npm_ and symlinked to /src/vendors/
-- ES2015 is transpiled into good old JS
 - Suggesting [Shoelace](https://shoelace.style) as minimalist CSS lib
