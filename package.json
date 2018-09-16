@@ -13,7 +13,6 @@
   "dependencies": {
     "@babel/core": "*",
     "@types/es6-promise": "*",
-    "mini.css": "^3.0.0",
     "page.js": "*",
     "riot": "*"
   },

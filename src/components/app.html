@@ -1,8 +1,10 @@
 <app>
   <header>
-    <a class=button href="/">home</a>
-    <a class=button href="/welcome/anonymous">welcome</a>
-    <a class=button href="/nowhere">nowhere</a>
+    <nav>
+      <a href="/">home</a>
+      <a href="/welcome/anonymous">welcome</a>
+      <a href="/nowhere">nowhere</a>
+    </nav>
   </header>
 
   <home if={ this.page == 'home' }></home>
@@ -30,4 +32,22 @@
 
     page({ hashbang: true })
   </script>
+
+  <style>
+    header nav a {
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin: 1rem;
+      border-bottom: 1px solid #ccc;
+      color: #555;
+      transition: all .3s;
+    }
+    header nav a:hover {
+      text-decoration: none;
+      color: #333;
+      border-bottom-color: #888;
+      border-bottom-width: .3rem;
+      padding-bottom: .7rem;
+    }
+  </style>
 </app>

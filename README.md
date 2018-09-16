@@ -48,4 +48,4 @@ index.html  # the app entry point
 - Riot files use `.html` extension
 - 3rd party libs files are installed with _npm_ and symlinked to /src/vendors/
 - ES2015 is transpiled into good old JS
-- Set [mini.css](https://minicss.org) as minimalist CSS framework
+- Suggesting [Shoelace](https://shoelace.style) as minimalist CSS lib
