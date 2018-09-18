@@ -1,14 +1,14 @@
 <app>
   <header>
-    <nav>
-      <a href="/">home</a>
-      <a href="/welcome/anonymous">welcome</a>
-      <a href="/nowhere">nowhere</a>
-    </nav>
+    <a href="/">
+      <h1>TCI</h1>
+      <h2>Temperament & Character Inventory</h2>
+    </a>
   </header>
 
   <home if={ this.page == 'home' }></home>
-  <welcome if={ this.page == 'welcome' } name={ this.name }></welcome>
+  <survey if={ this.page == 'survey' } name={ this.name }></survey>
+  <end if={ this.page == 'end' }></end>
   <error404 if={ this.page == 'error404' }></error404>
 
 
@@ -22,9 +22,15 @@
     // Routes.
     page('/', () => this.setPage('home'))
 
-    page('/welcome/:name', (ctx) => {
-      this.name = ctx.params.name
-      this.setPage('welcome')
+    page('/end', (ctx) => this.setPage('end'))
+
+    page('/:token', async (ctx) => {
+      token = ctx.params.token
+      const response = await request(`http://localhost:6000/questions/tci3240/`, {
+        headers: { 'Authentication': `User ${token}` }
+      })
+      console.log(response)
+      this.setPage('survey')
     })
 
     page('*', () => this.setPage('error404'))
